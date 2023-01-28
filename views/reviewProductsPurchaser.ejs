@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<h1 class="headmar1" style="text-align: center;">Recived Products</h1>
+<div class="row">
+  <%productData.forEach(function(element){ %>
+    <!-- <form action="/buyProduct" method="POST"> -->
+    <!-- <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body" style="text-align:center;">
+          <h5 class="card-title text-white bg-dark" ><%=element.name%></h5>
+          <p class="card-text" name="serialId" >Serial Id:<%=element.serialId%></p>
+          <p class="card-text">Price:<%=element.price%></p>
+          <p class="card-text">Description:<%=element.description%></p> -->
+          <!-- <button href="/buyProduct/<%=element.serialId%>" type="submit" class="btn btn-dark">Buy</button> -->
+          <!-- <a href="/purchaserReview/<%=element.serialId%>">Get Data</a>
+        </div>
+      </div>
+      
+    </div> -->
+  <!-- </form> -->
+  <div class="col-sm-4">
+    <div class="card mb-3 bg-light">
+      <div class="card-body" style="text-align:center;">
+        <h5 class="card-title " ><%=element.name%></h5>
+        <hr size="8" width="90%" color="red">
+        <p class="card-text" name="serialId" >Serial Id:<%=element.serialId%></p>
+        <p class="card-text">Price:<%=element.price%></p>
+        <p class="card-text">Description:<%=element.description%></p>
+        <!-- <button href="/buyProduct/<%=element.serialId%>" type="submit" class="btn btn-dark">Buy</button> -->
+        <!-- <a href="/buyProduct/<%=element._id%>">Buy</a> -->
+        <a class="btn btn-dark" href="/purchaserReview/<%=element.serialId%>" role="button">Get Data</a>
+      </div>
+    </div>
+  </div>
+    <%})%>
+</div>
+<%- include('partials/footer') %>

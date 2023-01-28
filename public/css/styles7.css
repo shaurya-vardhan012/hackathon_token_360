@@ -1,0 +1,32 @@
+.take{
+    height: 300px;
+    background-color: aqua;
+    /* margin:0 20px; */
+    background-color: #F8F9FA;
+}
+hr{
+    width: 40%;
+}
+.givemar:hover {
+    transform: scale(1.1);
+  }
+  .hr:hover {
+    transform: scale(1.1);
+  }
+.btn-lg{
+ 
+    margin:50px 10px;
+    padding:7px 40px;
+    border-radius: 24px; 
+}
+.btn-lg:hover {
+    transform: scale(1.1);
+  }
+.givemar{
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.styletext{
+    font-family: 'Montserrat', sans-serif;
+}

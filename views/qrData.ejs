@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <style>
+        .first    {border-style: solid;border-color: black; margin: auto; color: #3C4048;height: 300px; margin-top: 80px; background-color: #EEEEEE;width: 60%; border-radius: 30px; }
+        .first:hover {
+    transform: scale(1.04);
+  }
+        .textstyle{padding-top: 50px; font-family: 'Poppins', sans-serif; font-size: 30px;}
+        .fr{font-family: 'Sono', sans-serif;}
+        .fake{font-family: 'Noto Sans Mende Kikakui', sans-serif; margin-top: 30px; color: #CF0A0A;}
+        .fake:hover {
+    transform: scale(1.1);
+  }
+        </style>
+  <meta charset="utf-8">
+  <title>Product</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap-social.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+Mende+Kikakui&family=Poppins&family=Sono:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles8.css">
+</head>
+
+<body>
+    <% if(data.ans==0){ %>
+    <h1 class="fake" style="text-align: center;">Fake Product%></h1>
+    <% } else {%>
+        <h1 class="fake" style="text-align: center;">Real Product%></h1>
+    <% }%>
+    <hr size="8" width="90%" color="red">
+<div class="first">
+                <h2 class="textstyle" style="text-align: center;">Manufacture</h2>
+                <hr size="8" width="90%" color="red">
+                <h2 class="fr" style="text-align: center;">Serial Id: <%= serialID1 %></h2>
+                <h2 class="fr" style="text-align: center;">Source : <%=sourceManufacture%></h2>
+                <h2 class="fr" style="text-align: center;">Destination :<%= destinationManufacture%></h2>
+</div>
+<div  class="first">
+                <h2 class="textstyle" style="text-align: center;">Distributor</h2>
+                <hr size="8" width="90%" color="red">
+                <h2 class="fr" style="text-align: center;">Serial Id: <%= serialID2 %></h2>
+                <h2 class="fr" style="text-align: center;">Source : <%=sourceDistributor%></h2>
+                <h2 class="fr" style="text-align: center;">Destination :<%= destinationDistributor%></h2>
+</div>
+</body>
+</html>

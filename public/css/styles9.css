@@ -1,0 +1,13 @@
+.btn{
+   width: 100px;
+}
+/* .card{
+    background-color: #7B68EE;
+} */
+.card:hover {
+    transform: scale(1.1);
+  }
+  .headmar1{
+      margin: 10px 0 30px 0;
+      font-family: 'Poppins', sans-serif;
+  }
