@@ -1,0 +1,14 @@
+.card{
+    text-align: center;
+}
+
+.card-img1 {
+    width: 30%;
+    height: 40%;
+    object-fit: cover;
+}
+.card-img2{
+    width: 30%;
+    height: 40%;
+    object-fit: cover;
+}

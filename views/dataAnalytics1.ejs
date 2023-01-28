@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Item</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <style>
+        #chart-wrapper {
+          display: inline-block;
+          position: relative;
+          width: 50%;
+         margin-left: 22%;
+                }
+      </style>
+<canvas id="chart" width="400" height="200"></canvas>
+<div id="chart-wrapper">
+<canvas id="chart1" width="10" height="10" ></canvas>
+</div>
+<div id="chart-wrapper">
+<canvas id="chart2" width="100" height="100" ></canvas>
+</div>
+<script >
+ const ctx =   document.getElementById('chart');
+ 
+ const ctx1 =   document.getElementById('chart1');
+ const ctx2 =   document.getElementById('chart2');
+ const labelss =<%-JSON.stringify(location||null)%> 
+const datos=<%-JSON.stringify(price||null)%>
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels:labelss,
+    datasets: [{
+      label: '# of Votes',
+      data: datos,
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+new Chart(ctx1, {
+  type: 'pie',
+  data: {
+    labels:labelss,
+    datasets: [{
+      label: '# of Votes',
+      data: datos,
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels:labelss,
+    datasets: [{
+      label: '# of Votes',
+      data: datos,
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+</script>
+<body>
